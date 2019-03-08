@@ -1,0 +1,16 @@
+sum({$<EmployeeID={2}>}Freight)  -->employee 2 details
+sum({1-$<EmployeeID={2}>}Freight) -->except 2
+sum({1}freight)->previous calculation
+sum({$<Country={'France'},City={'Paris'}>}SupplierID)
+sum({$<City={'M*'}>}SupplierID)-->starts with M
+sum({$<Year={'20??'}>}SupplierID)
+
+sum({$<Country=,City={'Paris'}>}SupplierID)
+
+sum({$<Country={'India'},Year={2010}>}sales)
+
+sum({$<Country=,Year={2010}>}sales)
+
+sum({$<Year={2009}, Year={2010}>}sales)
+
+sum( {$<Year = {“>1978<2004”}>} Sales )
